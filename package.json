@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "this is a test for ebay shoes",
   "main": "index.js",
-  "scripts": {
-    "test": "protractor protractor.config.js"
+  "scripts": {    
+   "clean": "rm -rf dist",
+   "prebuild": "npm run clean",
+   "build": "tsc",
+   "test": "npm run build && protractor dist/protractor/config.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,9 @@
   "homepage": "https://github.com/afranco7/ebayshoes#readme",
   "dependencies": {
     "protractor": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/jasminewd2": "^2.0.3",
+    "typescript": "^2.7.2"
   }
 }
