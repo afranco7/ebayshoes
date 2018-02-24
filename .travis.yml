@@ -9,5 +9,3 @@ node_js:
 branches:
 except:
 - /^v\d+\.\d+\.\d+$/
-addons:
-  chrome: stable
