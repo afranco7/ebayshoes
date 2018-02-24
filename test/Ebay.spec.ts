@@ -1,6 +1,6 @@
 import { browser } from 'protractor';
 
-describe('Given a SDET learning protractor', () => {
+describe('Given a SDET on protractor', () => {
   describe('when open Ebay Page', () => {
     beforeEach(() => {
       browser.get('http://www.ebay.com');

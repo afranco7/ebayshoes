@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "this is a test for ebay shoes",
   "main": "index.js",
-  "scripts": {    
-   "clean": "rm -rf dist",
-   "prebuild": "npm run clean",
-   "build": "tsc",
-   "test": "npm run build && protractor dist/protractor/config.js"
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "test": "npm run build && protractor dist/protractor/config.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/jasminewd2": "^2.0.3",
+    "jasmine-spec-reporter": "^4.2.1",
     "typescript": "^2.7.2"
   }
 }
