@@ -4,7 +4,8 @@ import { reporter }   from './helpers/reporter';
 export const config: Config = {
  framework: 'jasmine',
  SELENIUM_PROMISE_MANAGER: false,
- specs: ['../test/Ebay.spec.js'],
+ specs: ['../test/**/*.spec.js'],
+ getPageTimeout: 30000,
  noGlobals: true,
  capabilities: {
     browserName: 'chrome',
