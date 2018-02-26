@@ -13,7 +13,8 @@ export class BrandPumaPage {
     return $('#e1-58>a.cbx');
   }
 
-  public async selectBrandPuma(brand) {    
+  public async selectBrandPuma(brand) {
+    await this.selectPuma.click();   
     await this.selectPuma.sendKeys(brand);
 
     await this.checkBoxPuma.click();
