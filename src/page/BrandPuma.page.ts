@@ -2,15 +2,21 @@ import { by, $, ElementFinder } from 'protractor';
 
 export class BrandPumaPage {
   private get selectPuma(): ElementFinder {
-    return $('#e1-50>a>input');
+    return $('#e1-37');
+  }
+
+  private get checkBoxPuma(): ElementFinder {
+    return $('#e1-51');
   }
 
   private get verifyPumaIsSelected(): ElementFinder {
     return $('#e1-58>a.cbx');
   }
 
-  public async selectBrandPuma() {    
-    await this.selectPuma.click();   
+  public async selectBrandPuma(brand) {    
+    await this.selectPuma.sendKeys(brand);
+
+    await this.checkBoxPuma.click();
   }
 
   public async verifyBrand(): Promise<string> {    
