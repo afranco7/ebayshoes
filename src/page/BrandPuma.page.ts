@@ -2,7 +2,7 @@ import { by, $, ElementFinder } from 'protractor';
 
 export class BrandPumaPage {
   private get selectPuma(): ElementFinder {
-    return $('input#e1-37.search');
+    return $('#e1-40');
   }
 
   private get checkBoxPuma(): ElementFinder {
