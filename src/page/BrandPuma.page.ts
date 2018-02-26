@@ -1,4 +1,4 @@
-import { by, $, ElementFinder } from 'protractor';
+import { by, $, ElementFinder, promise } from 'protractor';
 
 export class BrandPumaPage {
   private get selectPuma(): ElementFinder {
@@ -12,11 +12,13 @@ export class BrandPumaPage {
   private get verifyPumaIsSelected(): ElementFinder {
     return $('#e1-58>a.cbx');
   }
-
+  
+  private typeBrandPuma(brand): promise.Promise<void> {
+    return this.selectPuma.sendKeys(brand);
+  }
+  
   public async selectBrandPuma(brand) {
-    await this.selectPuma.click();   
-    await this.selectPuma.sendKeys(brand);
-
+    await this.typeBrandPuma(brand);
     await this.checkBoxPuma.click();
   }
 
