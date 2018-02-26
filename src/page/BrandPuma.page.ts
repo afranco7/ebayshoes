@@ -1,11 +1,23 @@
-import { $, ElementFinder, promise } from 'protractor';
+import { by, $, ElementFinder } from 'protractor';
 
 export class BrandPumaPage {
   private get selectPuma(): ElementFinder {
     return $('#e1-51');
   }
 
-  public selectBrandPuma(): promise.Promise<void> {
-    return this.selectPuma.click();
+  private get verifyPumaIsSelected(): ElementFinder {
+    return $('#e1-58>a.cbx');
+  }
+
+  public async selectBrandPuma() {    
+    await this.selectPuma.click();   
+  }
+
+  public async verifyBrand(): Promise<string> {    
+    if(await this.verifyPumaIsSelected.all(by.tagName('input')).get(0).getAttribute('checked')==="true"){
+      return await this.verifyPumaIsSelected.getText();
+    }
+    
+    return "Brand is not PUMA is: START"+await this.verifyPumaIsSelected.all(by.tagName('input')).get(0).getAttribute('checked')+"END";
   }
 }

@@ -7,10 +7,11 @@ export const config: Config = {
  specs: ['../test/**/*.spec.js'],
  getPageTimeout: 30000,
  noGlobals: true,
+ ignoreUncaughtExceptions: true,
  capabilities: {
     browserName: 'chrome',
     chromeOptions: {
-      args: ['--headless', '--disable-gpu', '--window-size=800,600']
+      args: ['--headless', '--disable-gpu', '--window-size=800,600','--no-sandbox']
     }
   }, 
  onPrepare: () => {
