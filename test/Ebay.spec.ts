@@ -92,7 +92,7 @@ describe('Given Ebay page', () => {
         await expect(product2Name).toEqual("Puma Kozyndan Londamned US 10 Eur 43 Slip On Sneakers Shoes Mens");
         await expect(product3Name).toEqual("Puma Mens Sneakers Stepper X Burn Rubber Castlerock Quarry Greek US 10 M");
         await expect(product4Name).toEqual("Mens Puma Sporty Look Trainers Evospeed");
-        await expect(product5Name).toEqual("100 % REAL PUMA MEN'S SLIPPERS /FLIP FLOPS FOOTWEAR SIZE UK 9 NOT USED FREE P&P");
+        await expect(product5Name).toEqual("NEW Puma Men's Ketava Duo Dp Flip Flops Thong Sandals - 903");
       });
     });    
   });

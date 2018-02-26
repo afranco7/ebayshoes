@@ -7,6 +7,7 @@ export const config: Config = {
  specs: ['../test/**/*.spec.js'],
  getPageTimeout: 30000,
  noGlobals: true,
+ ignoreUncaughtExceptions: true,
  capabilities: {
     browserName: 'chrome',
     chromeOptions: {
