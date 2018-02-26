@@ -7,6 +7,6 @@ export class ListOfProductsNamePage {
   }
 
   public selectTop5Products(valor): promise.Promise<string> { 
-    return this.getNameOfProducts.get(valor).getAttribute('data-mtdes');
+    return this.getNameOfProducts.get(valor).getText();
   }
 }

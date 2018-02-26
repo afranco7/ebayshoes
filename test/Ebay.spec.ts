@@ -19,6 +19,8 @@ import { InputArticlePage,
         let product4Price;
         let product5Name;
         let product5Price;
+        let brand;
+        let size;
 
 describe('Given Ebay page', () => { 
     beforeAll( async () => {
@@ -40,7 +42,7 @@ describe('Given Ebay page', () => {
           const sizeTenPage: SizeTenPage = new SizeTenPage();
   
           await brandPumaPage.selectBrandPuma();
-          await sizeTenPage.selectSizeTen();
+          size = await sizeTenPage.selectSizeTen();
         });
 
     describe('When Showing number of results', () => {
@@ -88,11 +90,11 @@ describe('Given Ebay page', () => {
           });
 
       it('then should the products be the corrects', async () => {
-        await expect(product1Name).toEqual("PUMA Men's Flip Flops Athletic Sandals Black Foam Size 10");
-        await expect(product2Name).toEqual("Puma Kozyndan Londamned US 10 Eur 43 Slip On Sneakers Shoes Mens");
-        await expect(product3Name).toEqual("Puma Mens Sneakers Stepper X Burn Rubber Castlerock Quarry Greek US 10 M");
-        await expect(product4Name).toEqual("Mens Puma Sporty Look Trainers Evospeed");
-        await expect(product5Name).toEqual("NEW Puma Men's Ketava Duo Dp Flip Flops Thong Sandals - 903");
+        const brandPumaPage: BrandPumaPage = new BrandPumaPage();
+        brand = brandPumaPage.verifyBrand();
+
+        await expect(brand).toEqual('PUMA');
+        await expect(size).toEqual('10');
       });
     });    
   });
@@ -100,7 +102,3 @@ describe('Given Ebay page', () => {
 });
 });
 });
-
-
-
-  
