@@ -41,7 +41,7 @@ describe('Given Ebay page', () => {
           const brandPumaPage: BrandPumaPage = new BrandPumaPage();
           const sizeTenPage: SizeTenPage = new SizeTenPage();
   
-          await brandPumaPage.selectBrandPuma('PUMA');
+          await brandPumaPage.selectBrandPuma();
           size = await sizeTenPage.selectSizeTen();
         });
 
