@@ -97,6 +97,18 @@ describe('Given Ebay page', () => {
 
               await expect(brand).toEqual('PUMA');
               await expect(size).toEqual('10');
+
+              await expect(product1Name)
+              .toEqual('Puma Kozyndan Londamned US 10 Eur 43 Slip On Sneakers Shoes Mens Price');
+              await expect(product2Name)
+              .toEqual('Puma Blue Suede Shoes!! Brand New!!'
+              + 'Classic Men' + 's Fashion Sneakers Shoes Size 10');
+              await expect(product3Name)
+              .toEqual('Puma Memory Foam Slide Men' + 's Size 10');
+              await expect(product4Name)
+              .toEqual('Puma Basket Classic LFS White/White/Gold 354367-17 Size 10');
+              await expect(product5Name)
+              .toEqual('Puma Mens Sneakers Stepper X Burn Rubber Castlerock Quarry Greek US 10 M');
             });
           });    
         });
