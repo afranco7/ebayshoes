@@ -6,7 +6,7 @@ export class BrandPumaPage {
   }  
 
   private get searchBrand(): ElementFinder {
-    return $('input#e1-37.search');
+    return $('.pnl.fashion>div>input');
   }  
 
   private get verifyPumaIsSelected(): ElementFinder {
