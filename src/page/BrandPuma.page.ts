@@ -14,10 +14,11 @@ export class BrandPumaPage {
   }
 
   public async verifyBrand(): Promise<string> {    
-    if(await this.verifyPumaIsSelected.all(by.tagName('input')).get(0).getAttribute('checked')==="true"){
+    if (await this.verifyPumaIsSelected
+      .all(by.tagName('input')).get(0).getAttribute('checked') === 'true') {
       return await this.verifyPumaIsSelected.getText();
     }
     
-    return "there is not brand selected";
+    return 'there is not brand selected';
   }
 }
