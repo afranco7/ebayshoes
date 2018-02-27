@@ -6,6 +6,6 @@ export class ButtonSearchArticlePage {
   }
 
   public async clickOnSearch() {    
-    return this.searchButton.click();
+    return await this.searchButton.click();
   }
 }
