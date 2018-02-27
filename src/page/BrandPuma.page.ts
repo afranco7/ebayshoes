@@ -3,19 +3,14 @@ import { by, $, $$, ElementFinder, ElementArrayFinder } from 'protractor';
 export class BrandPumaPage {
   private get selectPuma(): ElementArrayFinder {
     return $$('.brnd>div>a');
-  }  
-
-  /*private get searchBrand(): ElementFinder {
-    return $('.pnl.fashion>div>input');
-  }  */
+  }
 
   private get verifyPumaIsSelected(): ElementFinder {
     return $('#e1-58>a.cbx');
   }  
   
-  public async selectBrandPuma() {
-    //await this.searchBrand.sendKeys("PUMA");
-    return await this.selectPuma.get(7).click();
+  public async selectBrandPuma() {   
+    return await this.selectPuma.get(6).click();
   }
 
   public async verifyBrand(): Promise<string> {    
@@ -23,6 +18,6 @@ export class BrandPumaPage {
       return await this.verifyPumaIsSelected.getText();
     }
     
-    return "Brand is not PUMA is: START"+this.verifyPumaIsSelected.getText()+"END";
+    return "there is not brand selected";
   }
 }
