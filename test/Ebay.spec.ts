@@ -99,10 +99,10 @@ describe('Given Ebay page', () => {
               await expect(size).toEqual('10');
 
               await expect(product1Name)
-              .toEqual('Puma Kozyndan Londamned US 10 Eur 43 Slip On Sneakers Shoes Mens Price');
+              .toEqual('Puma Kozyndan Londamned US 10 Eur 43 Slip On Sneakers Shoes Mens');
               await expect(product2Name)
-              .toEqual('Puma Blue Suede Shoes!! Brand New!!'
-              + 'Classic Men' + 's Fashion Sneakers Shoes Size 10');
+              .toEqual('Puma Blue Suede Shoes!! Brand New!! Classic Men' + "'" 
+              + 's Fashion Sneakers Shoes Size 10');
               await expect(product3Name)
               .toEqual('Puma Memory Foam Slide Men' + 's Size 10');
               await expect(product4Name)
