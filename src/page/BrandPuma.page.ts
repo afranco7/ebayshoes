@@ -1,8 +1,8 @@
-import { by, $, ElementFinder } from 'protractor';
+import { by, $, $$, ElementFinder, ElementArrayFinder } from 'protractor';
 
 export class BrandPumaPage {
-  private get selectPuma(): ElementFinder {
-    return $('.brnd>div#e1-52>a');
+  private get selectPuma(): ElementArrayFinder {
+    return $$('.brnd>div>a>input');
   }  
 
   private get searchBrand(): ElementFinder {
@@ -15,7 +15,7 @@ export class BrandPumaPage {
   
   public async selectBrandPuma() {
     await this.searchBrand.sendKeys("PUMA");
-    return await this.selectPuma.all(by.tagName('input')).get(0).click();
+    return await this.selectPuma.get(7).click();
   }
 
   public async verifyBrand(): Promise<string> {    
