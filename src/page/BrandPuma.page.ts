@@ -2,7 +2,11 @@ import { by, $, ElementFinder } from 'protractor';
 
 export class BrandPumaPage {
   private get selectPuma(): ElementFinder {
-    return $('#e1-50>a');
+    return $('.brnd>div#e1-52>a');
+  }  
+
+  private get searchBrand(): ElementFinder {
+    return $('input#e1-37.search');
   }  
 
   private get verifyPumaIsSelected(): ElementFinder {
@@ -10,6 +14,7 @@ export class BrandPumaPage {
   }  
   
   public async selectBrandPuma() {
+    await this.searchBrand.sendKeys("PUMA");
     return await this.selectPuma.all(by.tagName('input')).get(0).click();
   }
 
