@@ -97,6 +97,17 @@ describe('Given Ebay page', () => {
 
               await expect(brand).toEqual('PUMA');
               await expect(size).toEqual('10');
+
+              await expect(product1Name).toEqual("Puma Kozyndan Londamned US 10 Eur "
+              + "43 Slip On Sneakers Shoes Mens");
+              await expect(product2Name).toEqual("Puma Blue Suede Shoes!! Brand New!! " 
+              + "Classic Men's Fashion Sneakers Shoes Size 10");
+              await expect(product3Name).toEqual("Puma Mens Sneakers Stepper X Burn " 
+              + "Rubber Castlerock Quarry Greek US 10 M");
+              await expect(product4Name).toEqual("PUMA ROMA TEXTURE COLOR STEEL "
+              + "GREY-LIMESTONE 362829 02 SIZE 10 WITH BOX!");
+              await expect(product5Name).toEqual("PUMA men's fashion white "
+              +"walking athletic shoes size--10");
             });
           });    
         });
