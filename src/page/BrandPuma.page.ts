@@ -9,8 +9,16 @@ export class BrandPumaPage {
     return $('#e1-58>a.cbx');
   }  
   
-  public async selectBrandPuma() {   
-    return await this.selectPuma.get(6).click();
+  public async selectBrandPuma() {
+    
+    for (let i = 7 ;i >=0 ;i--)
+    {      
+      if (await this.selectPuma.all(by.css('a>span')).get(i).getText() === 'PUMA'){
+         return await this.selectPuma.get(i).click();
+      }      
+    }
+
+    return 'PUMA brand was not found';      
   }
 
   public async verifyBrand(): Promise<string> {    
