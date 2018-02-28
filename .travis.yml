@@ -18,7 +18,6 @@ notifications:
   email:
     recipients:
       - afranco7@gmail.com
-      - anunez@belatrixsf.com
     on_success: always # default: change
     on_failure: always # default: always
 env:
